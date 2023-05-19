@@ -1,16 +1,15 @@
 package taxi.controller.car;
 
-import taxi.lib.Injector;
-import taxi.model.Car;
-import taxi.service.CarService;
-
+import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
+import taxi.lib.Injector;
+import taxi.model.Car;
+import taxi.service.CarService;
 
 @WebServlet(urlPatterns = "/cars")
 public class GetAllCarsController extends HttpServlet {
