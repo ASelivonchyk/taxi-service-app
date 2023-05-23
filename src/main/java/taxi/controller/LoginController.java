@@ -1,5 +1,8 @@
 package taxi.controller;
 
+import static taxi.Constants.ERROR_MESSAGE_TAG;
+import static taxi.Constants.SUCCESS_MESSAGE_TAG;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +24,12 @@ public class LoginController extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
+        if (req.getSession().getAttribute("driver_id") == null) {
+            req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
+            req.getSession().setAttribute(ERROR_MESSAGE_TAG, null);
+            req.getSession().setAttribute(SUCCESS_MESSAGE_TAG, null);
+        }
+        resp.sendRedirect("/index");
     }
 
     @Override
