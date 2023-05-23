@@ -11,11 +11,6 @@ public class Car {
     private List<Driver> drivers;
 
     public Car() {
-    }
-
-    public Car(String model, Manufacturer manufacturer) {
-        this.model = model;
-        this.manufacturer = manufacturer;
         drivers = new ArrayList<>();
     }
 

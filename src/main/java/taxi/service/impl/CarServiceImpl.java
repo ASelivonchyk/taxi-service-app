@@ -1,14 +1,13 @@
 package taxi.service.impl;
 
+import java.util.List;
+import java.util.NoSuchElementException;
 import taxi.dao.CarDao;
 import taxi.lib.Inject;
 import taxi.lib.Service;
 import taxi.model.Car;
 import taxi.model.Driver;
 import taxi.service.CarService;
-
-import java.util.List;
-import java.util.NoSuchElementException;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -39,9 +38,8 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car get(Long id) {
-        return carDao.get(id).orElseThrow(() ->
-            new NoSuchElementException("Can't get car by id: " + id)
-        );
+        return carDao.get(id).orElseThrow(
+                () -> new NoSuchElementException("Car id: " + id + " absent in database"));
     }
 
     @Override

@@ -9,14 +9,6 @@ public class Driver {
     private String login;
     private String password;
 
-    public Driver() {
-    }
-
-    public Driver(String name, String licenseNumber) {
-        this.name = name;
-        this.licenseNumber = licenseNumber;
-    }
-
     public void setLogin(String login) {
         this.login = login;
     }

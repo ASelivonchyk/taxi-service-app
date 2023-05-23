@@ -1,13 +1,13 @@
 package taxi.service.impl;
 
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 import taxi.dao.DriverDao;
 import taxi.lib.Inject;
 import taxi.lib.Service;
 import taxi.model.Driver;
 import taxi.service.DriverService;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class DriverServiceImpl implements DriverService {
@@ -21,7 +21,8 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public Driver get(Long id) {
-        return driverDao.get(id).get();
+        return driverDao.get(id).orElseThrow(
+                () -> new NoSuchElementException("Driver id: " + id + " absent in database"));
     }
 
     @Override
