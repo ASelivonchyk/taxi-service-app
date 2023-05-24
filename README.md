@@ -19,12 +19,16 @@ Project based on 3-layer architecture:
 Data access layer (DAO) -> Businnes layer (services) -> Presentation/View layer (controllers).
 
 ### Technologies:
+- Java 11;
+- MySQL;
 - Java Database Connectivity API (JDBC);
-- Jakarta Server Pages (JSP);
+- Java Server Pages (JSP);
 - Javax Servlet;
 - JavaServer Pages Standard Tag Librar (JSTL):
 - Apache Tomcat;
-- Apache Maven as a build tool.
+- Apache Maven as a build tool;
+- html, css;
+- Bootstrap 5 framework.
 
 ### How to start the application.
 To start the project:
