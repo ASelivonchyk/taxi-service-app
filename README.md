@@ -24,7 +24,7 @@ Data access layer (DAO) -> Businnes layer (services) -> Presentation/View layer 
 - Java Database Connectivity API (JDBC);
 - Java Server Pages (JSP);
 - Javax Servlet;
-- JavaServer Pages Standard Tag Librar (JSTL):
+- JSP Standard Tag Library (JSTL):
 - Apache Tomcat;
 - Apache Maven as a build tool;
 - html, css;
